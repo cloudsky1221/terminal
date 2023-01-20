@@ -1,0 +1,32 @@
+:root {
+    --color-black: black;
+    --color-grey: rgba(85, 85, 85, 0.611);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-black)
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    height: 1rem;
+    width: 100%;
+    border: none;
+    background-color: var(--color-black);
+    color: white;
+}
+
+input:focus {
+    border: none;
+}
+
+p {
+    color: white;
+}

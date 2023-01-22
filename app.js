@@ -1,5 +1,4 @@
 const body = document.querySelector("body");
-// const rode = document.querySelector("#rode");
 
 let i = -1;
 
@@ -12,33 +11,28 @@ function checkValue (value,field) {
     if (separated[1] == "ls") {
         newTextField.textContent = "Home   Desktop   Download ";
         body.appendChild(newTextField)
+    } else if (separated[1] == "help") {
+            newTextField.innerHTML = `ls - for list directories and files <br /> touch - to create new file`
+            body.appendChild(newTextField)        
+    } else {
+        newTextField.textContent = "type help to see list of commands";
+        body.appendChild(newTextField) 
     }
-
-
-    // field.appendChild(newTextField)
 
 }
 
-// class Inputs {
-//     constructor(){}
-
 function createInputs() {
-        // a = i++
         i++
         const ek = document.querySelectorAll("input")[i]
         ek.setAttribute("readonly","")
         const input = document.createElement("input")
         input.setAttribute("type", "text")
         input.value = `Desktop@: `
-        // input.setAttribute("readonly","")
         // input.setAttribute("data-id",`${a}`)
         checkValue(ek.value, input)
         body.appendChild(input)
         input.focus()
 }
-
-
-// const ao = new Inputs()
 
 body.addEventListener("keyup", (event) => {
     if (event.key === "Enter") {
@@ -49,4 +43,3 @@ body.addEventListener("keyup", (event) => {
 window.addEventListener("DOMContentLoaded", () => {
     createInputs()
 })
-
